@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelPizzas" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d1748a57-5cd0-4ee5-87d5-f4a53a38f973">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="ID_Pizza" class="java.lang.String"/>
+	<field name="Nome Pizza" class="java.lang.String"/>
+	<field name="Tamanho" class="java.lang.String"/>
+	<field name="Tipo" class="java.lang.String"/>
+	<field name="Preço" class="java.lang.String"/>
+	<field name="Imagem" class="java.lang.String"/>
+	<group name="Group1"/>
+	<group name="Group2"/>
+	<group name="Group3"/>
+	<group name="Group4"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="a3c1e9fe-cf7c-4018-8aff-2e86e6a76d02"/>
+				<staticText>
+					<reportElement x="20" y="20" width="276" height="43" forecolor="#FFFFFF" uuid="20022ec4-0703-4fed-95a1-69b6e5cdf408"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Relatório Pizza]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="c9f30fd1-3cd7-4c67-91b3-83a21f879fb6"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="92" height="20" uuid="6ba643fe-5255-4cf7-bfee-fca5154a8903"/>
+				<text><![CDATA[ID_Pizza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="0" width="92" height="20" uuid="8d7e0199-b2a7-4de3-a0e8-d1b37b8851cf"/>
+				<text><![CDATA[Nome Pizza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="0" width="92" height="20" uuid="8bef7a18-282b-4022-9d1f-beb0f212a8db"/>
+				<text><![CDATA[Tamanho]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="0" width="92" height="20" uuid="296f6a6a-8c07-4263-8cf5-38f3bab445b1"/>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="0" width="92" height="20" uuid="52c188e7-aa0e-4120-be73-3e346ed30482"/>
+				<text><![CDATA[Preço]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="0" width="92" height="20" uuid="ff25c265-3d3c-4da4-b52f-bf3e08f9b6f6"/>
+				<text><![CDATA[Imagem]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="63">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="42" width="555" height="1" uuid="eafcdf16-46db-4a39-bcb7-6df3f3dd5727"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="0" width="92" height="20" uuid="0274ba00-fa4d-431e-93e6-fe7c57fd9efd"/>
+				<textFieldExpression><![CDATA[$F{ID_Pizza}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="0" width="92" height="20" uuid="d2d5998c-5ec3-48b0-84f5-aef06f9351d5"/>
+				<textFieldExpression><![CDATA[$F{Nome Pizza}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="184" y="0" width="92" height="20" uuid="84b2efa5-be75-4ff4-8c52-d9bc1c2e3c65"/>
+				<textFieldExpression><![CDATA[$F{Tamanho}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="0" width="92" height="20" uuid="01d2db8b-cd7f-41c6-8d11-e1e5b422e999"/>
+				<textFieldExpression><![CDATA[$F{Tipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="0" width="92" height="20" uuid="c5c55bc2-f5a7-4815-9459-681a1ff95dc0"/>
+				<textFieldExpression><![CDATA[$F{Preço}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="460" y="1" width="92" height="42" uuid="c1072edb-e0bc-4643-882a-037ae37abd69"/>
+				<imageExpression><![CDATA[$F{Imagem}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="3d71cc55-5b0e-46fb-bb62-7ade71eae686"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="1fddf546-c29b-41dc-9ede-a5f5cfa7789d"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="f562c983-4708-4f7c-844f-b275b2015ef6"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
